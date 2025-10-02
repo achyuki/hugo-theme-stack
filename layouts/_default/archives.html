@@ -1,6 +1,6 @@
 {{ define "body-class" }}template-archives{{ end }}
 {{ define "main" }}
-    <header>
+    <header data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
         {{- $terms := $taxonomy.Pages -}}
         {{ if $terms }}
@@ -13,6 +13,7 @@
             </div>
         </div>
         {{ end }}
+
     </header>
 
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
@@ -21,7 +22,7 @@
 
     {{ range $filtered.GroupByDate "2006" }}
     {{ $id := lower (replace .Key " " "-") }}
-    <div class="archives-group" id="{{ $id }}">
+    <div class="archives-group" id="{{ $id }}" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <h2 class="archives-date section-title"><a href="{{ $.RelPermalink }}#{{ $id }}">{{ .Key }}</a></h2>
         <div class="article-list--compact">
             {{ range .Pages }}
