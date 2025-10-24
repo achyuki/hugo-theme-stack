@@ -82,35 +82,6 @@
     }
 }
 
-[data-scheme="dark"] {
-    #dark-mode-toggle {
-        margin-top: 1px;
-        color: var(--body-text-color);
-        font-weight: initial;
-        font-size: 19px;
-        
-        &::before {
-        content: "\F497";
-        font-family: "bootstrap-icons";
-        }
-    }
-}
-
-#dark-mode-toggle {
-    margin-top: 0;
-    margin-left: 3px;
-    color: var(--body-text-color);
-    align-items: initial;
-    cursor: initial;
-    gap: initial;
-    font-size: 20px;
-    
-    &::before{
-        content: "\F1D2";
-        font-family: "bootstrap-icons";
-    }
-}
-
 .subsection-list .article-list--tile {
     display: flex;
     flex-direction: row;
